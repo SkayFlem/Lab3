@@ -24,6 +24,5 @@ int main() {
 	printf("\n%d старорусских миль – это %.2f км", mil, result4);
 	printf("\n%d географических миль – это %.2f км\n", mil, result5);
 
-	system("pause");
 	return 0;
 }
