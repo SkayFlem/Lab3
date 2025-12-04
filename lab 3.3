@@ -1,23 +1,28 @@
-#define _CRT_SECURE_NO_DEPRECATE
-#include<stdio.h>
-#include<locale.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h>
 
-float a, b, result1, result2, result3;
+int main() {
+    float a;
+    float b;
+    char c[] = " ";
+	
+    printf("Введите первое число: ");
+    scanf("%f", &a);
+    printf("Введите второе число: ");
+    scanf("%f", &b);
+    
+    float proizv = a * b;
+    float summa = a + b;  
+    float raznost = a - b; 
 
-void main()
-{
-	setlocale(LC_ALL, "RUS");
-	puts("Введите первое вещественное число:");
-	scanf("%f", &a);
-	puts("Введите второе вещественное число:");
-	scanf("%f", &b);
-	result1 = a * b, result2 = a + b, result3 = a - b;
-
-	puts("-------------------------------------------------------------");
-	puts("|       a * b       |       a + b       |       a - b       |");
-	puts("-------------------------------------------------------------");
-	printf("| %7.1g * %7.1g | %7.1g + %7.1g | %7.1g - %7.1g |\n", a, b, a, b, a, b);
-	puts("-------------------------------------------------------------");
-	printf("| %17.1g | %17.1g | %17.1g |\n", result1, result2, result3);
-
+    printf("+------+------+------+\n");
+    printf("|  a*b |  a+b |  a-b |\n");
+    printf("+------+------+------+\n");
+    printf("| %2.0f*%.0f | %2.0f+%.0f | %2.0f-%.0f |\n", a, b, a, b, a, b);
+    printf("+------+------+------+\n");
+    printf("| %3.0f %s|%4.0f %s| %3.0f %s|\n", proizv, c, summa, c, raznost, c);
+    printf("+------+------+------+\n");
+    
+    return 0;
 }
